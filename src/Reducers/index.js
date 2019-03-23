@@ -4,12 +4,14 @@ import {authedUser} from './LoggedInUser'
 import {questions} from './Questions';
 import {LOGOUT_USER} from '../Actions/LoggedInUser';
 import {errMsg} from './ErrorMsg';
+import { loadingBarReducer } from 'react-redux-loading';
 
 export default combineReducers({
     users,
     authedUser,
     questions,
     errMsg,
+    loadingBar: loadingBarReducer,
 })
 /*const appReducer = combineReducers({
     users,

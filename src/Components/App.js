@@ -8,7 +8,6 @@ import NewPollQuestion from './NewPollQuestion';
 import Home from './Home';
 import { Route } from 'react-router-dom'
 import {fetchUsers} from '../Actions/Users';
-import LoadingBar from 'react-redux-loading';
 import {connect} from 'react-redux';
 import PrivateRoute from './PrivateRoute'
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -16,6 +15,8 @@ import Poll from './Poll';
 import {handleInitialData} from '../Actions/Shared';
 import Logout from './Logout';
 import ErrorPage from './ErrorPage';
+import LoadingBar from 'react-redux-loading';
+
 
 
 class App extends Component {
@@ -29,8 +30,8 @@ class App extends Component {
     return (
       <Router>
       <Fragment>
-      <div className="main-container ">
-      {/*<LoadingBar/>*/}
+      <LoadingBar/>
+      <div className="main-container">
        <Header/>
        <Route path='/login' component={Login} />
        <Route path='/error' component={ErrorPage} />
