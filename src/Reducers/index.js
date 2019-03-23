@@ -2,21 +2,22 @@ import {combineReducers} from 'redux';
 import {users} from './Users';
 import {authedUser} from './LoggedInUser'
 import {questions} from './Questions';
-import {LOGOUT_USER} from '../Actions/LoggedInUser';
 import {errMsg} from './ErrorMsg';
 import { loadingBarReducer } from 'react-redux-loading';
 
-export default combineReducers({
+/*export default combineReducers({
     users,
     authedUser,
     questions,
     errMsg,
     loadingBar: loadingBarReducer,
-})
-/*const appReducer = combineReducers({
+})*/
+const appReducer = combineReducers({
     users,
     authedUser,
     questions,
+    errMsg,
+    loadingBar: loadingBarReducer,
 })
 
 export default  (state, action) => {
@@ -25,4 +26,4 @@ export default  (state, action) => {
     }
   
     return appReducer(state, action)
-}*/
+}

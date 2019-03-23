@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import { withStyles } from '@material-ui/core/styles';
 import Image from 'react-bootstrap/Image';
 import {connect} from 'react-redux';
 
@@ -11,7 +10,7 @@ class UserProfile extends Component {
     <div className=' userProfile main'>
     <div className='horizontal-display'>
       <div className='avatar'>
-      <Image src="https://tylermcginnis.com/would-you-rather/dan.jpg" roundedCircle  />
+      <Image src={require("../static/images/"+user.avatarURL)}  roundedCircle  />
       </div>
       <div className=' left-border vertical-display'>
         <h3> {user.name}</h3>

@@ -76,7 +76,8 @@ li {
 
 .avatar {
   width: 20%;
- /* margin: auto; */
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 .userProfile .avatar {

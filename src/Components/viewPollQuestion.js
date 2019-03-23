@@ -9,13 +9,12 @@ class ViewPollQuestion extends Component {
 
   render() {
     const {userQuestion} =this.props;
-    console.log("q-id",userQuestion.id)
     return (
         <div className='viewPoll containers'>
         <div className='score'>{userQuestion.userName} asks:</div>
         <div className='horizontal-display'>
         <div className='avatar'>
-              <Image src="https://tylermcginnis.com/would-you-rather/dan.jpg" roundedCircle  />
+              <Image src={require("../static/images/"+userQuestion.avatar)} roundedCircle  />
           </div>
         <div className=" left-border stretch">
         <h3>Would you rather...</h3>
@@ -31,10 +30,8 @@ class ViewPollQuestion extends Component {
   }
 }
 const mapStateToProps = ({questions,users},{queId}) => {
-  console.log("xj352vofupe1dqz9emx13r",questions[queId])
   const question = questions[queId];
   const userQuestion =formatQuestion(question, users[question.author]);
-  console.log("for que",userQuestion);
   return ({
     userQuestion : userQuestion
   })}

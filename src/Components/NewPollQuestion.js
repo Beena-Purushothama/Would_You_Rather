@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import classnames from "classnames";
-import { ActionHelp } from 'material-ui/svg-icons';
 import {handleAddNewQuestion} from '../Actions/Questions';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
@@ -12,8 +10,6 @@ class NewPollQuestion extends Component {
     toHome : false ,
   }
   componentDidUpdate =(prevProps) => {
-    console.log("prev ques leng",Object.keys(prevProps.questions).length) 
-     console.log("current ques leng",Object.keys(this.props.questions).length) 
      if(Object.keys(this.props.questions).length > Object.keys(prevProps.questions).length){
        this.setState({toHome :true})
      }
@@ -29,8 +25,6 @@ class NewPollQuestion extends Component {
     event.preventDefault();
     const {dispatch} = this.props;
     const data = new FormData(event.target);
-    console.log("1 text ", data.get("optionOne"));
-    console.log("2 text ", data.get("optionTwo"))
 
     dispatch(handleAddNewQuestion({ 
       
@@ -41,7 +35,6 @@ class NewPollQuestion extends Component {
   }
 
   render() {
-      console.log("Render is called",this.props)
       const {optionOne,optionTwo,toHome} = this.state;
 
       if(toHome) {

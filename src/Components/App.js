@@ -7,7 +7,6 @@ import Header from './Header';
 import NewPollQuestion from './NewPollQuestion';
 import Home from './Home';
 import { Route } from 'react-router-dom'
-import {fetchUsers} from '../Actions/Users';
 import {connect} from 'react-redux';
 import PrivateRoute from './PrivateRoute'
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -25,7 +24,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("App :auuser=",this.props.authedUser)
     const {authedUser} = this.props;
     return (
       <Router>

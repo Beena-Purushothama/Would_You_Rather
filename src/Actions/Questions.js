@@ -30,7 +30,6 @@ const addNewQuestion =(question) =>({
 export const handleSaveQuestionAnswer = (info) => dispatch => {
     dispatch(addQuestionAnswer(info));
     saveQuestionAnswer(info).catch((e) => {
-        console.log("IN CATCH.....")
         dispatch(removeQuestionAnswer(info));
         alert('There was an error while saving your answer. Try again.');
     })

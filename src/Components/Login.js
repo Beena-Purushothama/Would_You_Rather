@@ -10,7 +10,6 @@ class Login extends Component {
   }
 
   handleChange=(event) =>{
-    console.log(event.target.value);
     this.setState({selected:event.target.value})
   }
 
@@ -24,15 +23,12 @@ class Login extends Component {
   render() {
     const {users,authedUser,loading} = this.props;
     const {selected} = this.state;
-    console.log("login: authed",authedUser);
     let { from } = this.props.location.state || { from: { pathname: "/" } };
-    console.log("from:",from)
     if(from.pathname === '/logout') {
       from = {
         pathname: "/"
       }
     }
-    console.log("from=",from)
 
     if (authedUser !== null) return <Redirect to={from} />;
     return (

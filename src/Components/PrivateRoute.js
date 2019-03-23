@@ -4,7 +4,6 @@ import { Route } from 'react-router-dom';
 
 
 export default function PrivateRoute({ component: Component,authenticated, ...rest }) {
-    console.log("Privte:In hereee",authenticated)
     return (
         <Route
           {...rest}

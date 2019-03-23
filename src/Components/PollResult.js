@@ -6,28 +6,28 @@ import {formatQuestion} from '../Utils/Helper';
 
 class PollResult extends Component {
   render() {
-    const { question,authedUser,totalVotes,optionOneVotes,optionTwoVotes,optionOnePercentile,optionTwoPercentile } = this.props;
+    const { userQuestion,authedUser,totalVotes,optionOneVotes,optionTwoVotes,optionOnePercentile,optionTwoPercentile } = this.props;
     return (
       <div className='poll-result containers '>
-        <h5 className='bottom-border'> Asked by {question.userName}</h5>
+        <h5 className='bottom-border'> Asked by {userQuestion.userName}</h5>
         <div className='horizontal-display'>
         <div className='avatar'>
-            <Image src="https://tylermcginnis.com/would-you-rather/dan.jpg" roundedCircle  />
+            <Image src={require("../static/images/"+userQuestion.avatar)} roundedCircle  />
         </div>
         <div className='left-border stretch'>
             <h5>Results</h5>
             <div className='vertical-display boarder'>
-            {question.optionOne.votes.includes(authedUser) && <span className="badge badge-secondary">your Answer</span>}
+            {userQuestion.optionOne.votes.includes(authedUser) && <span className="badge badge-secondary">your Answer</span>}
             <div>
-            <span>{question.optionOne.text}</span>
+            <span>{userQuestion.optionOne.text}</span>
             <ProgressBar now={optionOnePercentile} label={`${optionOnePercentile}%`} />
             <span> {optionOneVotes} out of {totalVotes} votes</span>
             </div>
             </div>
             <div className='vertical-display boarder'>
-            {question.optionTwo.votes.includes(authedUser) && <span className="badge badge-secondary">your Answer</span>}
+            {userQuestion.optionTwo.votes.includes(authedUser) && <span className="badge badge-secondary">your Answer</span>}
             <div>
-            <span>{question.optionTwo.text}</span>
+            <span>{userQuestion.optionTwo.text}</span>
             <ProgressBar now={optionTwoPercentile} label={`${optionTwoPercentile}%`} />
             <span> {optionTwoVotes} out of {totalVotes} votes</span>
             </div>
@@ -45,7 +45,7 @@ const mapStateToProps = ({questions,authedUser,users},{qid}) => {
   const optionOneVotes = question.optionOne.votes.length;
   const optionTwoVotes = question.optionTwo.votes.length;
   return ({
-    question : formatQuestion(question,users[question.author]),
+    userQuestion : formatQuestion(question,users[question.author]),
     authedUser,
     totalVotes,
     optionOneVotes,

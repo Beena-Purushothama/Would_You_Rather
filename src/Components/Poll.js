@@ -15,7 +15,6 @@ class PollQuestion extends Component {
 
   render() {
     const {qid,answered,isValid} = this.props;
-    console.log("qid",qid,"answered",answered,isValid);
 
     if(!isValid){
         return <Redirect to="/error"/>
@@ -34,7 +33,6 @@ class PollQuestion extends Component {
 
 const mapStateToProps = ({questions,users,authedUser}, props) =>{
   const {qid} = props.match.params;
-  console.log("qid poll",qid,"-----",questions[qid])
   return ({
     qid, 
     answered : Object.keys(users[authedUser].answers).includes(qid),
