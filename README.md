@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Would You rather?
 
-## Available Scripts
+A web app that lets a user play the “Would You Rather?” game. The game goes like this: A user is asked a question in the form: “Would you rather [option A] or [option B] ?”. Answering "neither" or "both" is against the rules.
 
-In the project directory, you can run:
+A users will be able to answer questions, see which questions they haven’t answered, see how other people have voted, post questions, and see the ranking of users on the leaderboard.
 
-### `npm start`
+## TL;DR
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To get started developing right away:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+* install all project dependencies with `npm install`
+* start the development server with `npm start`
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## What You're Getting
+```bash
+├── README.md - This file.
+├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
+├── public
+│   ├── favicon.ico # React Icon, You may change if you wish.
+│   └── index.html # DO NOT MODIFY
+└── src
+    ├── Actions
+    │   ├── ErrorMsg.js # Action creators for ErrorMsg state of the store.
+    │   ├── LoggedInUser.js # Action creators for authedUser state of the store.
+    │   ├── Questions.js # Action creators for Questions state of the store.
+    │   ├── Shared.js # Action creators for Questios and Users state of the store.
+    │   ├── Types.js # Declare action types as constants to access globally.
+    │   ├── Users.js # Action creators for users state of the store.
+    ├── Components
+    │   ├── Answered.js # component to view all answered question by the authenticated user.
+    │   ├── AnswerPOll.js # component to submit answer to a question by authenticated user
+    │   ├── App.js # This is the root of the app, Application route's are configured here
+    │   ├── ErrorPage.js # component to view any errors in the application.
+    │   ├── Header.js # component holds navigation, login and logout
+    │   ├── Home.js # component that combines answered and unanswered components in tabs.
+    │   ├── LeaderBoard.js # component to rank application users.
+    │   ├── Login.js # component for user to login.
+    │   ├── Logout.js # component to logout.
+    │   ├── NewPollQuestion.js # component to create new question.
+    │   ├── Poll.js # component decides if the user has already answered the question and shows poll result or answer poll page  
+    │   ├── PollResult.js # componenet to show poll results
+    │   ├── PrivateRoute.js # component to redirect user if not logged in
+    │   ├── UnAnswered.js # component to view all unanswered question by the authenticated user.
+    │   ├── UsersProfile.js # component to user statistics
+    │   ├── viewPollQuestion.js # component to show one question per instance
+    ├── Middleware
+    │   ├── index.js # root middleware
+    │   └── logger.js # middleware to log user action
+    ├── Reducers
+    │   ├── ErrorMsg.js # reducer for ErrorMsg state of the store.
+    │   └── index.js # root reducer
+    │   ├── LoggedInUser.js # reducer for authedUser state of the store.
+    │   ├── Questions.js # reducer for Questions state of the store.
+    │   ├── Users.js # reducer for users state of the store.
+    ├── static
+    │   ├── images # images folder.
+    │   │   ├── 1.jpg 
+    │   │   └── 2.jpg 
+    │   │   ├── 3.jpg
+    ├── Utils
+    │   ├── _DATA.js # mock api
+    │   ├── api.js # api to access data
+    │   ├── Helper.js # general functions
+    ├── App.css # Styles for your app. Feel free to customize this as you desire.
+    ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
+    ├── index.css # Global styles. You probably won't need to change anything here.
+    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
+```
