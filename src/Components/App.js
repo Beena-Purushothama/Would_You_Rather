@@ -34,8 +34,8 @@ class App extends Component {
        <Route path='/login' exact component={Login} />
        <Route path='/error' exact component={ErrorPage} />
        <PrivateRoute path="/" exact component={Home}  authenticated={authedUser !== null} />
-       <PrivateRoute path='/leaderBoard' exact component={LeaderBoard} authenticated={authedUser !== null} />
-       <PrivateRoute path='/newQuestion' exact component={NewPollQuestion} authenticated={authedUser !== null} />
+       <PrivateRoute path='/leaderboard' exact component={LeaderBoard} authenticated={authedUser !== null} />
+       <PrivateRoute path='/add' exact component={NewPollQuestion} authenticated={authedUser !== null} />
        <PrivateRoute path='/question/:qid' exact component={Poll} authenticated={authedUser !== null} />
        <PrivateRoute path='/logout' exact component={Logout} authenticated={authedUser !== null} />
        <Route path='*' component={ErrorPage} />

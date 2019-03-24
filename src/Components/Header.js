@@ -15,12 +15,12 @@ class Header extends PureComponent {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/newQuestion' activeClassName='active'>
+          <NavLink to='/add' activeClassName='active'>
           New Question
           </NavLink>
         </li>
         <li>
-          <NavLink to='/leaderBoard' activeClassName='active'>
+          <NavLink to='/leaderboard' activeClassName='active'>
           LeaderBoard
           </NavLink>
         </li>
