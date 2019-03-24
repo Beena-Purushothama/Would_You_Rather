@@ -24,6 +24,7 @@ class Login extends Component {
     const {users,authedUser,loading} = this.props;
     const {selected} = this.state;
     let { from } = this.props.location.state || { from: { pathname: "/" } };
+
     if(from.pathname === '/logout') {
       from = {
         pathname: "/"

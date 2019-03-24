@@ -3,7 +3,6 @@ import Image from 'react-bootstrap/Image';
 import {connect} from 'react-redux';
 import {handleSaveQuestionAnswer} from '../Actions/Questions';
 import {formatQuestion} from '../Utils/Helper';
-import PropTypes from 'prop-types';
 
 class AnswerPoll extends Component {
 state ={

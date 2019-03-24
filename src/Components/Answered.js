@@ -21,7 +21,7 @@ class Answered extends Component {
 }
 
 Answered.propTypes = {
-  answeredQuestions: PropTypes.string,// ids of answered questions by the authenticated user
+  answeredQuestions: PropTypes.array,// ids of answered questions by the authenticated user
 };
 
 const mapStateToProps =({authedUser,questions,users}) => {
