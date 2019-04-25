@@ -8,7 +8,7 @@ A users will be able to answer questions, see which questions they haven’t ans
 ![](LoginPage.png)
 
 ## Home Page View
-![](HomePage.png)
+![](Home.png)
 
 ## Leader Board Page View
 ![](LeaderBoardPage.png)
