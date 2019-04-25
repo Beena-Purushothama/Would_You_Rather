@@ -4,6 +4,21 @@ A web app that lets a user play the “Would You Rather?” game. The game goes 
 
 A users will be able to answer questions, see which questions they haven’t answered, see how other people have voted, post questions, and see the ranking of users on the leaderboard.
 
+## Login Page View
+![](LoginPage.png)
+
+## Home Page View
+![](HomePage.png)
+
+## Leader Board Page View
+![](LeaderBoardPage.png)
+
+## Answer Poll Page View
+![](AnswerPollPage.png)
+
+## Create New Page View
+![](CreateNewQuestion.png)
+
 ## TL;DR
 
 To get started developing right away:
